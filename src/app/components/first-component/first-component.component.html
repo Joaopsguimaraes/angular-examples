@@ -1,0 +1,27 @@
+<main class="page">
+    <h2 [ngStyle]="{'color':'#3498db'}">FIRST COMPONENTS WORKS!</h2>
+    <section class="grid">
+        <div class="info">
+            <h4>Welcome to angular 14!</h4>
+            <h4>Name: {{ person.name }} {{ person.lastName }}</h4>
+            <h4>Age: {{ person.age }}</h4>
+            <h4>Job: {{ person.job }}</h4>
+            <h4>GitHub User : {{ userGitHub }}</h4>
+            <h4>Company Job: {{ company }}</h4>
+            <ul class="list">
+                <li>{{tech.first}}</li>
+                <li>{{tech.second}}</li>
+                <li>{{tech.third}}</li>
+            </ul>
+        </div>
+        <div class="gh" *ngIf="nameToShowLink === 'Joao Guimaraes' ; else nameNotFound">
+            <img src="https://github.com/Joaopsguimaraes.png" alt="Joao User" *ngIf="canShow" />
+            <a
+                class="link-gh"
+                href="https://github.com/joaopsguimaraes">https://github.com/joaopsguimaraes</a>
+        </div>
+        <ng-template class="gh" #nameNotFound>
+            <h2>User not found</h2>
+        </ng-template>
+    </section>
+</main>

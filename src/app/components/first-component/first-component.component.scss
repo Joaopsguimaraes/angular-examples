@@ -62,5 +62,17 @@
       }
     }
   }
-  
+  .button-show{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    background: none;
+    color:#fafafa;
+    border: 2px solid #fafafa;
+    &:hover{
+      background: #313131;
+    }
+  }
 }

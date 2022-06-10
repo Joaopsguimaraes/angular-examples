@@ -1,6 +1,7 @@
 <main class="page">
     <h2 [ngStyle]="{'color':'#3498db'}">FIRST COMPONENTS WORKS!</h2>
-    <section class="grid">
+    <button (click)="showContainer()" class="button-show">Show info</button>
+    <section class="grid" *ngIf="canShow">
         <div class="info">
             <h4>Welcome to angular 14!</h4>
             <h4>Name: {{ person.name }} {{ person.lastName }}</h4>
@@ -15,10 +16,8 @@
             </ul>
         </div>
         <div class="gh" *ngIf="nameToShowLink === 'Joao Guimaraes' ; else nameNotFound">
-            <img src="https://github.com/Joaopsguimaraes.png" alt="Joao User" *ngIf="canShow" />
-            <a
-                class="link-gh"
-                href="https://github.com/joaopsguimaraes">https://github.com/joaopsguimaraes</a>
+            <img src="https://github.com/Joaopsguimaraes.png" alt="Joao User" />
+            <a class="link-gh" href="https://github.com/joaopsguimaraes">https://github.com/joaopsguimaraes</a>
         </div>
         <ng-template class="gh" #nameNotFound>
             <h2>User not found</h2>

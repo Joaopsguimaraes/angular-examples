@@ -6,8 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./first-component.component.scss'],
 })
 export class FirstComponentComponent implements OnInit {
-  canShow: boolean = true;
+  canShow: boolean = false;
   nameToShowLink: string = 'Joao Guimaraes';
+  
+  showContainer(): void {
+    this.canShow = !this.canShow;
+  }
 
   person = {
     name: 'Joao',
